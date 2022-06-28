@@ -1,11 +1,11 @@
 import { StyleSheet, Text, View, TouchableOpacity } from 'react-native';
 
-export default function Task() {
+export default function Task({ item }) {
   return (
     <View style={styles.item}>
       <View style={styles.itemLeft}>
         <View style={styles.square}></View>
-        <Text style={styles.itemText}>This is the task</Text>
+        <Text style={styles.itemText}>{item}</Text>
       </View>
       <View style={styles.circular}></View>
     </View>
@@ -42,7 +42,7 @@ const styles = StyleSheet.create({
     width: 20,
     height: 20,
     borderWidth: 2,
-    borderRadius: '50%',
+    borderRadius: 60,
     borderColor: '#55BCF6',
   },
 });
